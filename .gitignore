@@ -1,0 +1,34 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# 환경 변수 및 설정
+.env
+.env.*
+
+# 운영체제별
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+.history/
+
+# 결과/임시 파일
+result.json
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 기타
+.idea/
+*.swp
