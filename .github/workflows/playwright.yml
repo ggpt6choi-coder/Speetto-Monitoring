@@ -6,8 +6,8 @@ on:
     - cron: '0 4 * * 5'
     # 매주 금요일 17:00 (UTC+9 → UTC 08:00)
     - cron: '0 8 * * 5'
-    # 매분
-    - cron: '*/1 * * * *'
+    # 매 6분
+    - cron: '*/6 * * * *'
   workflow_dispatch:
 
 jobs:
