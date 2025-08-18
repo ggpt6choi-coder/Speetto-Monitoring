@@ -1,9 +1,8 @@
-import './App.css';
-import ResultCardList from '../ResultCardList';
+import ResultCardList from './ResultCardList';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ textAlign: 'center' }}>
       <ResultCardList />
     </div>
   );

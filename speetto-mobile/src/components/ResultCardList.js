@@ -144,14 +144,17 @@ const ResultCardList = () => {
         </Typography>
         <Grid container spacing={3} justifyContent="center">
           {filteredData.length === 0 ? (
-            <Grid item xs={12} textAlign="center">
+            <Grid sx={{ width: '100%', textAlign: 'center' }}>
               <Typography color="textSecondary">
                 해당 회차 데이터가 없습니다.
               </Typography>
             </Grid>
           ) : (
             filteredData.map((item, idx) => (
-              <Grid item xs={12} sm={8} md={6} key={idx}>
+              <Grid
+                sx={{ width: { xs: '100%', sm: '66.666%', md: '50%' } }}
+                key={idx}
+              >
                 <Card
                   sx={{
                     borderRadius: 4,
