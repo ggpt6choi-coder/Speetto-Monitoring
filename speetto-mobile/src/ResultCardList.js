@@ -26,7 +26,10 @@ const ResultCardList = () => {
   // 탭별 필터링
   const tabLabels = ['스피또 500', '스피또 1000', '스피또 2000'];
   const filteredData = Array.isArray(data)
-    ? data.filter((item) => item.title && item.title.includes(tabLabels[tab]))
+    ? data
+        .filter((item) => item.title && item.title.includes(tabLabels[tab]))
+        .slice()
+        .reverse()
     : [];
 
   useEffect(() => {
@@ -96,6 +99,7 @@ const ResultCardList = () => {
         >
           🍀스피또 잭팟 현황판🍀
         </Typography>
+
         <Tabs
           value={tab}
           onChange={(_, v) => setTab(v)}
@@ -124,14 +128,18 @@ const ResultCardList = () => {
           ))}
         </Tabs>
         <Typography
-          variant="subtitle2"
+          variant="body2"
           color="textSecondary"
           align="center"
-          gutterBottom
           sx={{ mt: 2, mb: 2 }}
         >
+          매주 금요일 데이터가 업데이트 됩니다
+          <br />
           {filteredData.length > 0 && filteredData[0].storeRateDate
-            ? `데이터 기준 (${filteredData[0].storeRateDate})`
+            ? `(기준 날짜 : ${filteredData[0].storeRateDate.replaceAll(
+                '-',
+                '.'
+              )})`
             : '데이터 기준 (자동 업데이트)'}
         </Typography>
         <Grid container spacing={3} justifyContent="center">
@@ -153,10 +161,11 @@ const ResultCardList = () => {
                     flexDirection: 'column',
                     height: '100%',
                     bgcolor: '#fff',
+                    border: '1.5px solid #fff', // 배경색과 동일하게 설정
                     transition: 'transform 0.2s, box-shadow 0.2s',
                     ':hover': {
                       transform: 'scale(1.02)',
-                      boxShadow: '0 8px 32px 0 #ffd600, 0 2px 12px 0 #fffde7',
+                      boxShadow: '0 8px 32px 0 #ffd600, 0 2px -10px 0 #fffde7',
                     },
                   }}
                 >
