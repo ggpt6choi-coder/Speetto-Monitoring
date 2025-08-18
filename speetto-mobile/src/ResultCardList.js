@@ -30,7 +30,9 @@ const ResultCardList = () => {
     : [];
 
   useEffect(() => {
-    fetch('/result.json')
+    fetch(
+      'https://raw.githubusercontent.com/ggpt6choi-coder/Speetto-Monitoring/refs/heads/main/result.json'
+    )
       .then((res) => {
         if (!res.ok) throw new Error('데이터를 불러올 수 없습니다.');
         return res.json();
