@@ -19,7 +19,6 @@ Thumbs.db
 .history/
 
 # 결과/임시 파일
-result.json
 *.log
 *.tmp
 
