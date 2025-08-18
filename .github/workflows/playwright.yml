@@ -23,7 +23,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright Crawler
-        run: node playwright-mcp-example.js
+        run: node crawling-info.js
       - name: Set git user
         run: |
           git config --global user.name 'github-actions[bot]'
