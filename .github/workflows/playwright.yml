@@ -2,12 +2,13 @@ name: Playwright Crawler
 
 on:
   schedule:
-    # 매주 금요일 13:00 (UTC+9 → UTC 04:00)
-    - cron: '0 4 * * 5'
-    # 매주 금요일 17:00 (UTC+9 → UTC 08:00)
-    - cron: '0 8 * * 5'
-    # 매 6분
-    - cron: '*/6 * * * *'
+    # 매일 13:00~18:00 (UTC+9 → UTC 04:00~09:00)
+    - cron: '0 4 * * *' # 13:00 KST
+    - cron: '0 5 * * *' # 14:00 KST
+    - cron: '0 6 * * *' # 15:00 KST
+    - cron: '0 7 * * *' # 16:00 KST
+    - cron: '0 8 * * *' # 17:00 KST
+    - cron: '0 9 * * *' # 18:00 KST
   workflow_dispatch:
 
 jobs:
