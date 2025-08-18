@@ -30,3 +30,7 @@ __pycache__/
 # 기타
 .idea/
 *.swp
+
+
+#firebase
+.firebase/
