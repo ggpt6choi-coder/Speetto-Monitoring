@@ -1,51 +1,80 @@
-# Speetto-Monitoring
+# Speetto Monitoring
 
-# 스피또 정보 자동 추출기 PRD (Product Requirements Document)
+스피또(즉석복권) 실시간 잭팟/입고율 모니터링 및 모바일 PWA 서비스
 
-## 1. 목적
+## 주요 기능
 
-- 동행복권(dhlottery.co.kr) 사이트에서 스피또(즉석복권) 관련 최신 정보를 자동으로 추출한다.
-- 네트워크 요청에서 JSON 데이터를 파싱하고, DOM에서 스피또 관련 정보를 수집한다.
+- Playwright 기반 웹 크롤러로 스피또 복권 데이터(result.json) 자동 수집
+- GitHub Actions로 매일/매주 자동 크롤링 및 데이터 커밋
+- React 기반 모바일 웹(PWA) 서비스 제공
+- Firebase Hosting을 통한 배포 및 접속자 분석(GA 연동)
+- 홈화면 추가(PWA), iOS/Android/카카오웹뷰 환경별 안내 지원
 
-## 2. 주요 기능
+## 폴더 구조
 
-1. **사이트 접속 및 데이터 수집**
-   - Playwright를 사용해 dhlottery.co.kr에 자동 접속
-   - 네트워크 요청 중 `getGameInfoAll` API의 JSON 응답을 자동으로 파싱
-   - DOM에서 스피또 관련 정보(예: 남은 수량, 당첨 현황 등) 추출
-2. **실행 및 자동화**
-   - Node.js 환경에서 스크립트로 실행 가능
-   - headless/headed 모드 모두 지원
-3. **에러 처리 및 로깅**
-   - 네트워크 파싱 실패, 셀렉터 미발견 등 예외 상황에 대한 에러 메시지 출력
-   - 주요 데이터 콘솔 출력
+```
+Speetto/
+├── playwright-mcp-example.js   # Playwright 크롤러 예제
+├── result.json                 # 크롤링된 복권 데이터
+├── .github/workflows/          # GitHub Actions 워크플로우
+├── speetto-mobile/             # React(PWA) 프론트엔드
+│   ├── src/components/         # 주요 컴포넌트(App.js 등)
+│   ├── public/                 # manifest, index.html 등
+│   ├── .env                    # (로컬) Firebase 등 환경변수
+│   └── ...
+└── ...
+```
 
-## 3. 요구사항
+## 사용 기술
 
-- Node.js 18 이상
-- Playwright 패키지
-- (선택) 추출 정보의 구조화 및 파일 저장 기능
+- Node.js, Playwright (크롤링)
+- React, MUI, PWA (프론트)
+- Firebase Hosting, Analytics
+- GitHub Actions (자동화)
 
-## 4. 상세 시나리오
+## 개발/배포 방법
 
-1. 사용자가 스크립트를 실행한다.
-2. 스크립트가 dhlottery.co.kr 메인 페이지에 접속한다.
-3. 네트워크 요청 중 `getGameInfoAll` 응답을 감지하여 JSON 데이터로 파싱한다.
-4. DOM에서 스피또 관련 정보를 추출한다. (정확한 셀렉터는 개발 중 확인)
-5. 추출된 정보를 콘솔에 출력한다.
-6. (선택) 추출 정보를 파일로 저장한다.
+### 1. 크롤러 실행
 
-## 5. 예외 및 한계
+```sh
+node crawling-info.js
+```
 
-- 사이트 구조 변경 시 셀렉터 및 API 경로 수정 필요
-- 스피또 정보가 비동기로 로드될 경우 대기 로직 필요
+### 2. 프론트엔드 개발
 
-## 6. 향후 확장
+```sh
+cd speetto-mobile
+npm install
+npm start
+```
 
-- 다양한 즉석복권 정보 추가 지원
-- 주기적 자동 실행 및 알림 기능
-- 웹 대시보드 연동
+### 3. 배포(Firebase Hosting)
+
+```sh
+npm run build
+firebase deploy --only hosting
+```
+
+### 4. GitHub Actions 자동화
+
+- `.github/workflows/playwright.yml`에서 스케줄/자동 커밋 설정
+
+## 환경변수(.env 예시)
+
+```
+REACT_APP_FIREBASE_API_KEY=...
+REACT_APP_FIREBASE_AUTH_DOMAIN=...
+REACT_APP_FIREBASE_PROJECT_ID=...
+REACT_APP_FIREBASE_STORAGE_BUCKET=...
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=...
+REACT_APP_FIREBASE_APP_ID=...
+REACT_APP_FIREBASE_MEASUREMENT_ID=...
+```
+
+## 참고/특이사항
+
+- `.env` 등 민감 정보는 Git에 올리지 마세요.
+- PWA 설치/홈화면 추가, iOS/Android/카카오웹뷰 환경별 안내 지원
+- result.json은 자동 커밋/배포됩니다.
 
 ---
-
-문의 및 피드백: hyeonwoo
