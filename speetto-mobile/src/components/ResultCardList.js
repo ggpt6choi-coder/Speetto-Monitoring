@@ -134,10 +134,13 @@ const ResultCardList = () => {
           align="center"
           sx={{ mt: 2, mb: 2 }}
         >
-          매주 금요일 데이터가 업데이트 됩니다
-          <br />
+          {/* 매주 금요일 데이터가 업데이트 됩니다
+          <br /> */}
           {filteredData.length > 0 && filteredData[0].updateDate
-            ? `(기준 날짜 : ${filteredData[0].updateDate.replaceAll('-', '.')})`
+            ? `데이터 업데이트 : ${filteredData[0].updateDate.replaceAll(
+                '-',
+                '.'
+              )}`
             : '데이터 기준 (자동 업데이트)'}
         </Typography>
         <Grid container spacing={3} justifyContent="center">
