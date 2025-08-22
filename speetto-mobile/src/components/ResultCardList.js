@@ -41,6 +41,7 @@ const ResultCardList = () => {
         return res.json();
       })
       .then((json) => {
+        console.log(json);
         setData(json);
         setLoading(false);
       })
@@ -135,11 +136,8 @@ const ResultCardList = () => {
         >
           매주 금요일 데이터가 업데이트 됩니다
           <br />
-          {filteredData.length > 0 && filteredData[0].storeRateDate
-            ? `(기준 날짜 : ${filteredData[0].storeRateDate.replaceAll(
-                '-',
-                '.'
-              )})`
+          {filteredData.length > 0 && filteredData[0].updateDate
+            ? `(기준 날짜 : ${filteredData[0].updateDate.replaceAll('-', '.')})`
             : '데이터 기준 (자동 업데이트)'}
         </Typography>
         <Grid container spacing={3} justifyContent="center">
@@ -311,6 +309,13 @@ const ResultCardList = () => {
                         variant="caption"
                         color="textSecondary"
                         sx={{ mt: 1, textAlign: 'center', lineHeight: 1.5 }}
+                      >
+                        {item.storeRateDate} 기준
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        color="textSecondary"
+                        sx={{ mt: 0, textAlign: 'center', lineHeight: 1.5 }}
                       >
                         '판매점 입고율'은 소비자에게 판매된 수량이 아닙니다.
                       </Typography>
