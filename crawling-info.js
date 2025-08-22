@@ -107,12 +107,14 @@ const fs = require('fs');
         storeRatePercent: info.storeRatePercent,
         updateDate: (() => {
           const now = new Date();
-          const year = String(now.getFullYear()).slice(-2);
-          const month = String(now.getMonth() + 1).padStart(2, '0');
-          const day = String(now.getDate()).padStart(2, '0');
-          const hour = String(now.getHours()).padStart(2, '0');
-          const minute = String(now.getMinutes()).padStart(2, '0');
-          const second = String(now.getSeconds()).padStart(2, '0');
+          // 한국시간으로 변환 (UTC+9)
+          const kstTime = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+          const year = String(kstTime.getFullYear()).slice(-2);
+          const month = String(kstTime.getMonth() + 1).padStart(2, '0');
+          const day = String(kstTime.getDate()).padStart(2, '0');
+          const hour = String(kstTime.getHours()).padStart(2, '0');
+          const minute = String(kstTime.getMinutes()).padStart(2, '0');
+          const second = String(kstTime.getSeconds()).padStart(2, '0');
           return `${year}.${month}.${day} ${hour}:${minute}:${second}`;
         })(),
       };
