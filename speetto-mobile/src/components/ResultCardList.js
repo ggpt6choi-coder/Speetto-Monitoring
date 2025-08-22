@@ -41,7 +41,6 @@ const ResultCardList = () => {
         return res.json();
       })
       .then((json) => {
-        console.log(json);
         setData(json);
         setLoading(false);
       })

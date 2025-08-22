@@ -202,22 +202,38 @@ function App() {
               를 선택
               <br />홈 화면에서 어플처럼 사용할 수 있습니다.
             </div>
-            <button
-              onClick={() => setShowIOSBanner(false)}
-              style={{
-                background: '#00c853',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 6,
-                padding: '8px 18px',
-                fontWeight: 700,
-                fontSize: '1rem',
-                marginTop: 8,
-                cursor: 'pointer',
-              }}
-            >
-              확인
-            </button>
+            <div style={{ display: 'flex', gap: '10px', marginTop: 8 }}>
+              <button
+                onClick={() => setShowIOSBanner(false)}
+                style={{
+                  background: '#00c853',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 6,
+                  padding: '8px 18px',
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                }}
+              >
+                확인
+              </button>
+              <button
+                onClick={() => (window.location.href = '/guide.html')}
+                style={{
+                  background: '#2196F3',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 6,
+                  padding: '8px 18px',
+                  fontWeight: 700,
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                }}
+              >
+                설정방법
+              </button>
+            </div>
           </div>
         )}
     </div>
