@@ -21,7 +21,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1754371280064.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "16 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 2000 62회",
@@ -45,7 +45,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1750661047991.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "96 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 2000 61회",
@@ -69,7 +69,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1746580937313.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "100 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 2000 60회",
@@ -93,7 +93,31 @@
     "img": "https://dhlottery.co.kr/img/board/content/1742257592995.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "100 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
+  },
+  {
+    "title": "스피또 1000 99회",
+    "ranks": [
+      {
+        "rank": "1 등",
+        "amount": "5억원",
+        "count": "10 매"
+      },
+      {
+        "rank": "2 등",
+        "amount": "2천만원",
+        "count": "50 매"
+      },
+      {
+        "rank": "3 등",
+        "amount": "1만원",
+        "count": "275,000 매"
+      }
+    ],
+    "img": "https://dhlottery.co.kr/img/board/content/1756883990484.png",
+    "storeRateDate": "25-09-12",
+    "storeRatePercent": "0 %",
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 1000 98회",
@@ -117,7 +141,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1754281414797.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "88 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 1000 97회",
@@ -125,7 +149,7 @@
       {
         "rank": "1 등",
         "amount": "5억원",
-        "count": "1 매"
+        "count": "0 매"
       },
       {
         "rank": "2 등",
@@ -141,7 +165,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1750223642156.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "100 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 1000 96회",
@@ -165,7 +189,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1748564821385.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "100 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 1000 95회",
@@ -189,7 +213,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1745220290803.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "100 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 1000 94회",
@@ -213,7 +237,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1743986486562.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "100 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 500 47회",
@@ -237,7 +261,7 @@
     "img": "https://dhlottery.co.kr/img/board/content/1750988621830.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "29 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   },
   {
     "title": "스피또 500 46회",
@@ -261,6 +285,6 @@
     "img": "https://dhlottery.co.kr/img/board/content/1735004565417.png",
     "storeRateDate": "25-09-12",
     "storeRatePercent": "79 %",
-    "updateDate": "25.09.12 12:21:39"
+    "updateDate": "25.09.13 11:51:08"
   }
 ]
